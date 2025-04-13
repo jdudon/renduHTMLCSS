@@ -1,0 +1,231 @@
+:root {
+    /* Déclaration des variables de couleurs réutilisables */
+    --beige: #F2EFEE;
+    --brown: #46352A;
+    --green: #4A6743;
+    --black: #1F1F1F;
+}
+
+* {
+    /* Réinitialisation des marges/paddings par défaut */
+    margin: 0;
+    padding: 0;
+
+    /* Suppression du style par défaut des listes et des liens */
+    list-style: none;
+    text-decoration: none;
+
+    /* Couleur de texte par défaut */
+    color: var(--black);
+}
+
+/* Titres principaux avec une police spécifique */
+h1, h2, h3 {
+    font-family: "Vollkorn SC", serif;
+    font-weight: 400;
+    margin: 2% 0;
+}
+
+/* Paragraphes avec une autre police */
+p {
+    font-family: "Inter", sans-serif;
+}
+
+/* Style général du body */
+body {
+    background-color: var(--beige);
+    text-align: center;
+}
+
+/* Ajout d’un espacement autour des sections sauf la bannière */
+section:not(.heroBanner) {
+    padding: 5% 10%;
+}
+
+/* ---------------------- */
+/* ----- NAVIGATION ----- */
+/* ---------------------- */
+
+nav {
+    display: flex; /* Met les éléments en ligne */
+    justify-content: space-between; /* Espace entre le logo et la liste */
+    align-items: center; /* Alignement vertical */
+}
+
+ul {
+    display: flex;
+    justify-content: space-around; /* Espace entre les liens */
+    width: 33%;
+}
+
+/* ----------------------------- */
+/* ----- BANNIÈRE PRINCIPALE ---- */
+/* ----------------------------- */
+
+.heroBanner {
+    display: flex;
+    background-color: var(--brown);
+
+    img {
+        width: 50%;
+    }
+
+    div {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    h1 {
+        color: var(--beige);
+    }
+}
+
+/* --------------------------- */
+/* ----- BLOCS DE VALEURS ---- */
+/* --------------------------- */
+
+.values {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.value {
+    border: var(--brown) 1px solid;
+    padding: 1%;
+}
+
+/* Bandeau accroche (non utilisée ici) */
+.catchPhrase {
+    background-color: var(--green);
+    padding: 2%;
+    font-size: 24px;
+    color: var(--beige);
+}
+
+/* --------------------------- */
+/* ----- BLOC PRODUITS ------- */
+/* --------------------------- */
+
+.products {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 25%;
+    box-shadow: 0px 15px 15px 5px lightgrey;
+    padding: 5% 2%;
+    border-radius: 20px;
+    text-align: left;
+
+    * {
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover; /* L’image remplit sans être déformée */
+    }
+
+    h3 {
+        font-family: "Inter", sans-serif;
+        font-weight: 800;
+        text-transform: capitalize;
+    }
+
+    .price {
+        color: var(--green);
+    }
+
+    .btn {
+        background-color: var(--green);
+        color: var(--beige);
+        padding: 10px;
+        border: 1px solid var(--green);
+    }
+}
+
+/* --------------------------- */
+/* ----- FORMULAIRE --------- */
+/* --------------------------- */
+
+form.card {
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+
+    .firstRow {
+        display: flex;
+
+        .formGroup {
+            width: 45%;
+        }
+    }
+
+    input, textarea {
+        border: var(--green) 1px solid;
+        padding: 10px;
+        width: 90%;
+    }
+
+    .btn {
+        margin: auto;
+        width: 30%;
+        align-self: center;
+        font-family: "Vollkorn SC", serif;
+    }
+}
+
+/* --------------------------- */
+/* -------- FOOTER ---------- */
+/* --------------------------- */
+
+footer {
+    background-color: var(--brown);
+    padding: 2%;
+
+    p {
+        color: var(--beige);
+    }
+}
+
+/* --------------------------- */
+/* ---- PAGE "A PROPOS" ----- */
+/* --------------------------- */
+
+#handMadeSection {
+    background-color: #DDD7D3;
+}
+
+.handMade {
+    display: flex;
+
+    p {
+        width: 50%;
+    }
+
+    img {
+        width: 50%;
+        object-fit: cover;
+        height: 400px;
+    }
+}
+
+/* Alignement horizontal des blocs de valeurs */
+.valueInline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+
+    .value {
+        margin: 2%;
+    }
+}
